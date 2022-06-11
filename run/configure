@@ -10,4 +10,8 @@ echo "java -Duser.dir=$modelFolder -cp $repastPosition/repast.simphony.runtime_$
 
 echo "java -Duser.dir=$modelFolder -cp $repastPosition/repast.simphony.runtime_$repastVersion/lib/*:$repastPosition/repast.simphony.runtime_$repastVersion/bin: repast.simphony.runtime.RepastMain $modelFolder/cms_wheat.rs"> run_gui
 
+chmod +x compile
+chmod +x run_gui
+chmod +x run_batch
+
 

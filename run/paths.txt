@@ -1,0 +1,5 @@
+/home/giulioni/abm_java_libraries/repast
+2.7.0
+/home/giulioni/tmp/wheat_fore/codice/02/cms_wheat
+/home/giulioni/abm_java_libraries
+ 

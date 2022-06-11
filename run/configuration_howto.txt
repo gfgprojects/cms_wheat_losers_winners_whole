@@ -1,0 +1,23 @@
+edit the paths.txt file
+the file has four lines
+1) the path to the repast packages folder (without final)
+2) the repast version
+3) the path to the cms_wheat model folder (without final /) 
+4) the path to the other libraries (the folder have to contain the jts and geotools folders)
+5) blank line
+
+example:
+
+/home/giulioni/abm_java_libraries/repast
+2.7.0
+/home/giulioni/tmp/wheat_fore/codice/02/cms_wheat
+/home/giulioni/abm_java_libraries
+
+Once you have provided this information, make the configure file executable and run it.
+
+The configure script creates three file:
+compile
+run_batch
+run_gui
+
+ 

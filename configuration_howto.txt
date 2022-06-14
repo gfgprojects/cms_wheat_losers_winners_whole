@@ -28,16 +28,16 @@ compile
 run
 
 copy the file
-/home/giulioni/Documenti/models/cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_neutral/producers_fao_1993_2016.csv
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_neutral/producers_fao_1993_2016.csv
 in
-/home/giulioni/Documenti/models/cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/producers_w.csv
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/producers_w.csv
 (and also in producers.csv)
 
 and 
 
-/home/giulioni/Documenti/models/cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_neutral/buyers_Misc_tuned_1993_2016.csv
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_neutral/buyers_Misc_tuned_1993_2016.csv
 in
-/home/giulioni/Documenti/models/cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/buyers_Misc.csv
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/buyers_Misc.csv
 
 Note that all the demand components are summed in the buyers_Misc.csv file.  
 Therefore, the buyers_Food.csv, buyers_Feed.csv and buyers_Seed.csv files has all zeros.
@@ -50,10 +50,51 @@ The script read data in three output subfolder: output_neutral, output_nino and 
 
 create the folders output_neutral, output_nino and output_nina inside the output folder
 and copy the files starting with z from output the three folders
+(at this level the three folders has identical files. This makes the R script works, but what is important is that output_neutral has the right data)
 
 execute the R script r_fitness_function_evaluation.R
 
+to check the goodness of fit
 
+=====================
+generate output for El Nino 
+
+copy the file
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_nino/producers_fao_1993_2016_2013_nino.csv
+in
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/producers_w.csv
+(and also in producers.csv)
+
+and 
+
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_nino/buyers_Misc_tuned_1993_2016_2013_nino.csv
+in
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/buyers_Misc.csv
+
+run the simulation with the run_batch
+
+move the run/output/z* files in run/output/output_nino
+
+=====================
+generate output for La nina 
+
+Procede similarly to the previous step
+
+=====================
+
+Now the three output subfolder have different output relating to three different simulations
+
+=====================
+Obtain the price and quantities percentage deviations
+
+Execute the r_cost_comparison.R script (it uses several other r_scripts and other csv files)
+
+At the end of the execution you will find the following files
+
+change_import_nina2013.csv
+change_import_nino2013.csv
+change_price_nina2013.csv
+change_price_nino2013.csv
 
 
 

@@ -96,6 +96,28 @@ change_import_nino2013.csv
 change_price_nina2013.csv
 change_price_nino2013.csv
 
+=====================
+making the figure with metapost
+
+enter the run/scripts/metapost_figure folder
+
+Execute the r_write_input_for_metapost.R R script
+
+it generates a number of mpinput files
+
+execute the
+mptopdf fig_effects_2013.mp
+command to obtain the final figure in pdf format.
+The filename of this figure is
+fig_effects_2013-1.pdf
+
+
+
+
+
+
+
+
 
 
  

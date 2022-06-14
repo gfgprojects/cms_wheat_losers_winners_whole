@@ -1,3 +1,4 @@
+===========================
 edit the paths.txt file
 the file has four lines
 1) the path to the repast packages folder (without final)
@@ -21,7 +22,26 @@ run_batch
 run_gui
 
 =====================
-compile and run
+compile 
+
+=====================
+run
+
+copy the file
+/home/giulioni/Documenti/models/cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_neutral/producers_fao_1993_2016.csv
+in
+/home/giulioni/Documenti/models/cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/producers_w.csv
+(and also in producers.csv)
+
+and 
+
+/home/giulioni/Documenti/models/cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_neutral/buyers_Misc_tuned_1993_2016.csv
+in
+/home/giulioni/Documenti/models/cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/buyers_Misc.csv
+
+Note that all the demand components are summed in the buyers_Misc.csv file.  
+Therefore, the buyers_Food.csv, buyers_Feed.csv and buyers_Seed.csv files has all zeros.
+
 =====================
 now we execute the R script r_fitness_function_evaluation.R 
 to evaluate the simulation goodness of fit

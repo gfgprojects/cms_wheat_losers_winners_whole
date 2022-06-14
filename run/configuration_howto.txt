@@ -20,4 +20,20 @@ compile
 run_batch
 run_gui
 
+=====================
+compile and run
+=====================
+now we execute the R script r_fitness_function_evaluation.R 
+to evaluate the simulation goodness of fit
+
+The script read data in three output subfolder: output_neutral, output_nino and output_nina
+
+create the folders output_neutral, output_nino and output_nina inside the output folder
+and copy the files starting with z from output the three folders
+
+execute the R script r_fitness_function_evaluation.R
+
+
+
+
  

@@ -16,7 +16,7 @@ sessions.quantities<-data.session$QuantityExchanged
 sessions.offered.quantities<-data.session$OfferedQuantity
 
 
-str1<-system("grep startUsingInputsFromTimeTick= /home/giulioni/tmp/wheat_fore/codice/02/cms_wheat/src/cms_wheat/Cms_builder.java",intern=T)
+str1<-system("grep startUsingInputsFromTimeTick= ../../rs_model/cms_wheat/src/cms_wheat/Cms_builder.java",intern=T)
 str2<-unlist(strsplit(str1,"="))[2]
 str3<-unlist(strsplit(str2,";"))[1]
 start.real.data<-as.numeric(str3)
@@ -45,7 +45,7 @@ sessions.quantities<-data.session$QuantityExchanged
 sessions.offered.quantities<-data.session$OfferedQuantity
 
 
-str1<-system("grep startUsingInputsFromTimeTick= /home/giulioni/tmp/wheat_fore/codice/02/cms_wheat/src/cms_wheat/Cms_builder.java",intern=T)
+str1<-system("grep startUsingInputsFromTimeTick= ../../rs_model/cms_wheat/src/cms_wheat/Cms_builder.java",intern=T)
 str2<-unlist(strsplit(str1,"="))[2]
 str3<-unlist(strsplit(str2,";"))[1]
 start.real.data<-as.numeric(str3)
@@ -76,7 +76,7 @@ sessions.quantities<-data.session$QuantityExchanged
 sessions.offered.quantities<-data.session$OfferedQuantity
 
 
-str1<-system("grep startUsingInputsFromTimeTick= /home/giulioni/tmp/wheat_fore/codice/02/cms_wheat/src/cms_wheat/Cms_builder.java",intern=T)
+str1<-system("grep startUsingInputsFromTimeTick= ../../rs_model/cms_wheat/src/cms_wheat/Cms_builder.java",intern=T)
 str2<-unlist(strsplit(str1,"="))[2]
 str3<-unlist(strsplit(str2,";"))[1]
 start.real.data<-as.numeric(str3)

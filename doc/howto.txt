@@ -1,0 +1,123 @@
+===========================
+edit the paths.txt file
+the file has four lines
+1) the path to the repast packages folder (without final)
+2) the repast version
+3) the path to the cms_wheat model folder (without final /) 
+4) the path to the other libraries (the folder have to contain the jts and geotools folders)
+5) blank line
+
+example:
+
+/home/giulioni/abm_java_libraries/repast
+2.7.0
+/home/giulioni/tmp/wheat_fore/codice/02/cms_wheat
+/home/giulioni/abm_java_libraries
+
+Once you have provided this information, make the configure file executable and run it.
+
+The configure script creates three file:
+compile
+run_batch
+run_gui
+
+=====================
+compile 
+
+=====================
+run
+
+copy the file
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_neutral/producers_fao_1993_2016.csv
+in
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/producers_w.csv
+(and also in producers.csv)
+
+and 
+
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_neutral/buyers_Misc_tuned_1993_2016.csv
+in
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/buyers_Misc.csv
+
+Note that all the demand components are summed in the buyers_Misc.csv file.  
+Therefore, the buyers_Food.csv, buyers_Feed.csv and buyers_Seed.csv files has all zeros.
+
+=====================
+now we execute the R script r_fitness_function_evaluation.R 
+to evaluate the simulation goodness of fit
+
+The script read data in three output subfolder: output_neutral, output_nino and output_nina
+
+create the folders output_neutral, output_nino and output_nina inside the output folder
+and copy the files starting with z from output the three folders
+(at this level the three folders has identical files. This makes the R script works, but what is important is that output_neutral has the right data)
+
+execute the R script r_fitness_function_evaluation.R
+
+to check the goodness of fit
+
+=====================
+generate output for El Nino 
+
+copy the file
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_nino/producers_fao_1993_2016_2013_nino.csv
+in
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/producers_w.csv
+(and also in producers.csv)
+
+and 
+
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/data_2013_nino/buyers_Misc_tuned_1993_2016_2013_nino.csv
+in
+cms_wheat_losers_winners_whole/rs_model/cms_wheat/data/buyers_Misc.csv
+
+run the simulation with the run_batch
+
+move the run/output/z* files in run/output/output_nino
+
+=====================
+generate output for La nina 
+
+Procede similarly to the previous step
+
+=====================
+
+Now the three output subfolder have different output relating to three different simulations
+
+=====================
+Obtain the price and quantities percentage deviations
+
+Execute the r_cost_comparison.R script (it uses several other r_scripts and other csv files)
+
+At the end of the execution you will find the following files
+
+change_import_nina2013.csv
+change_import_nino2013.csv
+change_price_nina2013.csv
+change_price_nino2013.csv
+
+=====================
+making the figure with metapost
+
+enter the run/scripts/metapost_figure folder
+
+Execute the r_write_input_for_metapost.R R script
+
+it generates a number of mpinput files
+
+execute the
+mptopdf fig_effects_2013.mp
+command to obtain the final figure in pdf format.
+The filename of this figure is
+fig_effects_2013-1.pdf
+
+
+
+
+
+
+
+
+
+
+ 
